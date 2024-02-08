@@ -3,8 +3,10 @@ import * as React from "react";
 // Using require as normal import causes typescript error
 const Fade = require("react-reveal/Fade");
 import { data } from "../mock/mock";
+import { useEmail } from "../hooks/useEmail";
 
 export const Contact: React.SFC = () => {
+  const { result, onSubmit } = useEmail();
   return (
     <>
       <Fade>
@@ -20,15 +22,8 @@ export const Contact: React.SFC = () => {
           </div>
           <form
             className="grid grid-rows-6 gap-6"
-            action="https://formsubmit.co/garimamalik28199@gmail.com"
-            method="POST"
+            onSubmit={onSubmit}
           >
-            <input
-              type="hidden"
-              name="_subject"
-              value="Someone wants to contact you from website"
-            />
-            <input type="hidden" name="_captcha" value="false" />
             <div className="row-span-1 w-full h-16 grid grid-rows-3 grid-cols-1 gap-2">
               <label
                 htmlFor="name"
@@ -97,6 +92,7 @@ export const Contact: React.SFC = () => {
               />
             </div>
           </form>
+          <span>{result}</span>
         </section>
       </Fade>
     </>

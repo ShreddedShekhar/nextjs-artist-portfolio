@@ -6,6 +6,8 @@ import useDatabase from "../hooks/useDatabase";
 import { ImageComponent } from "./ImageComponent";
 
 import { Gallery } from "./Gallery";
+import { images } from "./constants";
+import YoutubeEmbed from "./YoutubeEmbed";
 
 export interface ShowcaseProps {
   limit: boolean;
@@ -14,7 +16,7 @@ export interface ShowcaseProps {
 export const Showcase: React.SFC<ShowcaseProps> = (ShowcaseProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isGalleryOpen, setIsGalleryOpen] = useState(false);
-  const images: object[] = useDatabase("images", ShowcaseProps.limit);
+  
 
   return (
     <>
@@ -41,6 +43,8 @@ export const Showcase: React.SFC<ShowcaseProps> = (ShowcaseProps) => {
               />
             );
           })}
+          <YoutubeEmbed embedId="Eel4Kv-WEhg" />
+          <YoutubeEmbed embedId="eZmQQJ44X_E" />
         </main>
       </section>
       {isGalleryOpen && (

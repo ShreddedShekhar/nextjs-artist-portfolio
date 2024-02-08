@@ -1,6 +1,6 @@
 import "tailwindcss/tailwind.css";
 import "swiper/swiper-bundle.min.css";
-
+import "./styles.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import { AnimateSharedLayout } from "framer-motion";
@@ -42,7 +42,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
         <meta name="apple-mobile-web-app-status-bar" content="#fcd5ce" />
 
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon"  href="/favicon.ico" />
         <meta name="theme-color" content="#fcd5ce" />
 
         {/* Essential META Tags */}

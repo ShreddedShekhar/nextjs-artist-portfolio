@@ -48,10 +48,11 @@ export const Hero: React.SFC = () => {
         <div className="relative grid place-items-center order-1 md:order-2">
           <Image
             loader={modelImageLoader}
-            src="https://res.cloudinary.com/wecloud/image/upload/v1625592156/artist-portfolio/model_axxy6f.jpg"
+            src="https://res.cloudinary.com/doxkfuxtg/image/upload/v1707410521/MyCall_1_kbqit6.jpg"
             alt="Picture of artist"
             objectFit="contain"
-            height={imageDimensions[1]}
+            priority={true}
+            height={imageDimensions[0]}
             width={imageDimensions[0]}
           />
         </div>
